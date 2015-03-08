@@ -1,0 +1,36 @@
+package NewTetris;
+
+import zen.core.Zen;
+
+public class Block {
+
+int x;
+int y;
+TetrisBlock parent;
+static Block[][] board;
+
+	public Block(int x, int  y ){
+		this.x = x;
+		this.y = y;
+	}
+	
+	
+	public void draw() {
+		Zen.setColor("red");
+	}
+	public void move(){
+		board[x][y + 1] = board[x][y];
+		board[x][y] = null;
+		y ++;
+		
+	}
+
+
+	public boolean canMove() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+ public void setBoard(Block[][] b) {
+	 
+ }
+}
